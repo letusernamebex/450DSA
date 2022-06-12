@@ -1,0 +1,14 @@
+#Reverse an Array
+
+def rev(arr):
+    return arr[::-1]
+    
+t = int(input())
+for i in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()[:n]))
+    res = rev(arr)
+    print(*res)
+    
+# This solution uses slicing technique. [::-1] will traverse list from right to left because of -1.
+# Alternatively, reversed(list) function can also be used.
