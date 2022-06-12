@@ -1,0 +1,39 @@
+# Find minimum and maximum element in an array
+# https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1
+
+# Here, for getting the required numbers, we can traverse the list twice or at once. Both will have O(n) complexity.
+
+### Traversing the list twice, separately
+
+def getMinMax( a, n):
+    l = [0,0]
+    mn = 10**7
+    mx = 0
+    for i in range(n):
+        if a[i]<mn:
+            mn = a[i]
+    l[0] = mn
+    
+    for i in range(n):
+        if a[i]>mx:
+            mx = a[i]
+    l[1] = mx
+    
+    return l
+    
+    
+### Traversing the list at once
+
+def getMinMax( a, n):
+    l = [0,0]
+    mn = 10**7
+    mx = 0
+    for i in range(n):
+        if a[i]<mn:
+            mn = a[i]
+        if a[i]>mx:
+            mx = a[i]
+    l[0] = mn
+    l[1] = mx
+ 
+    return l
